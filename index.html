@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+<body>
+
+  <div id="learn-card">
+    <div class="l-card d-flex justify-content-center align-items-center">
+      <div class="flip d-flex" id="learnCard">
+        <div class="card bg-light d-flex"> 
+          <div class="face front"> 
+            <div class="inner text-center">   
+              <div class="front-text">
+                Character Count Tool - Character Counter is a free character counter tool that provides instant character count & word count statistics for a given text. This tool reports the number of character with spaces and without spaces, also the number of words an
+                </div>
+              <div>
+                <button type="button" class="btn btn-outline-info" id="reveal">
+                  Reveal
+                </button>
+              </div>
+            </div>
+          </div> 
+          <div class="face back"> 
+            <div class="inner text-center"> 
+              <div class="back-text">
+                Character Count Tool - Character Counter is a free character counter tool that provides instant character count & word count statistics for a given text. This tool reports the number of character with spaces and without spaces, also the number of words an
+              </div>
+              <div class="back-btns d-flex justify-content-around">
+                <button type="button" class="btn-sm btn-outline-secondary" id="again">
+                  Again
+                </button>
+                <div>
+                  <button type="button" class="btn-sm btn-outline-danger" id="hard">
+                    Hard
+                  </button>
+                  <button type="button" class="btn-sm btn-outline-success" id="easy">
+                    Easy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>	 
+      </div>
+    </div>
+  </div>
+
+   <!-- Create new flashCard -->
+  <div id="ccc">
+    <div class="c-card d-flex justify-content-center align-items-center" id="cCard">
+      <div class="create-card text-center bg-light" id="createCard">
+        <div class="p-3 d-flex flex-column">
+          <div>
+            <textarea name="frontText" class="border border-secondary" id="frontText"  rows="4" placeholder="front text"></textarea>
+          </div>
+          <div>
+            <textarea name="backText" class="border border-secondary" id="backText"  rows="6" placeholder="back text"></textarea>
+          </div>
+          <div>
+            <button type="button" id="create" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- header -->
+    <header>
+        <div class="container text-center">
+            <h1>
+                FlashCard
+            </h1>
+        </div>
+    </header>
+
+    <hr>
+
+    
+
+
+      <!-- main div -->
+    <main>
+        <div class="flexDirection d-flex flex-wrap justify-content-around  align-content-center text-center">
+                <div id="create" class="p2 h-btn" onclick="createFlashCard()">
+                    Create
+                </div>
+                <div id="learn" class="p2 h-btn" onclick="learnFlashCard()">
+                    Learn
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="stats text-center">
+            <br>            
+            <h3>
+                Stats
+            </h3>
+
+            <table class="table table-sm table-hover table-borderless">
+                <tbody>
+                  <tr>
+                    <td>total flashcards</td>
+                    <td>600</td>
+                  </tr>
+                  <tr>
+                    <td>cards in review box</td>
+                    <td>400</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

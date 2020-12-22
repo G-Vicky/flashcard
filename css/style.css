@@ -1,0 +1,139 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fcfb;
+}
+
+header .logo {
+  text-align: center;
+  font-size: x-large;
+}
+
+.p2 {
+  align-items: center;
+  cursor: pointer;
+
+  font-size: large;
+
+  width: 240px;
+  height: 180px;
+  margin: 3%;
+  padding: 70px 0px;
+
+  border-radius: 3%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.h-btn {
+  background-color: #bfd8d5;
+}
+
+hr {
+  margin: auto;
+  width: 80%;
+}
+
+.table {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+td {
+  width: 50%;
+}
+
+/* learning flip card */
+
+.flip {
+  -webkit-perspective: 800;
+  perspective: 800;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+#learn-card, #ccc{
+  display: none;
+}
+.flip .card {
+  width: 570px;
+  min-height: 270px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  background-color: #fff;
+}
+.flip .card .face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+.flip .card .front {
+  position: absolute;
+  width: 570px;
+  z-index: 1;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+  position: absolute;
+}
+.inner {
+  margin: 0px !important;
+  min-width: 570px;
+}
+
+.front-text {
+  padding: 5%;
+  height: 180px;
+}
+
+.back-text {
+  padding: 5%;
+  height: 180px;
+}
+
+.back-btns {
+  margin-top: 27px;
+}
+
+
+.c-card, .l-card {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 59, 59, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+.create-card {
+  border-radius: 3%;
+}
+
+.c-card textarea {
+  text-align: center;
+  border-radius: 3%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .flexDirection {
+    flex-direction: column-reverse !important;
+  }
+  .p2 {
+    padding: 42px 0px;
+    height: 120px;
+  }
+}
